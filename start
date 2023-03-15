@@ -1,0 +1,67 @@
+from tkinter import * import numpy as np from random import randint, sample
+
+win = Tk()
+
+C = int(input ("start C = "))
+
+N = int (input ("N = " ))
+
+assert C > 0,
+
+"Некому играть (число игроков
+
+меньше 2)"
+
+assert N > 0, 'Нельзя играть без карт, увы" assert C * N <= 40, "Карт больше, чем в колоде"
+
+player = []
+
+colors = f1: 'R', 2: 'G', 3: 'B', 4: 'W'}
+
+player1 = []
+
+for c in range (C):
+
+for n in range (N):
+
+player1.append (colors[randint (1,
+
+4)] + str(randint (1, 10)))
+
+player2 = player1.copy (
+
+player.append (player2)
+
+player1.clear
+
+i = int(input ("get-cards "))
+
+print (i, player[i - 1])
+
+def startNC():
+
+for i in range (C) :
+
+for j in range (N) :
+
+11 = Label (text=player[i][j])
+
+11.place (x=200 + 30 * j, y=100
+
++ 50 * i)
+
+12 = Label(text=f'Карты игрока N{i
+
++ 1}:')
+
+12.place (×=20, y=100 + 50 × i)
+
+win.title ('#1')
+
+win.geometry ('1366×768')
+
+start = Button (text='Start',
+
+command=startNC)
+
+start.place (x=600, y=50) win.mainloop ()
